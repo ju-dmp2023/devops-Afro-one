@@ -9,5 +9,7 @@ __pycache__/
 .coverage
 coverage.xml
 
+python 
+
 # Other Python related caches
 *.egg-info/

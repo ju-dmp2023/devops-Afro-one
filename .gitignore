@@ -1,0 +1,13 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore VS Code settings folder
+.vscode/
+
+# Ignore coverage files
+.coverage
+coverage.xml
+
+# Other Python related caches
+*.egg-info/

@@ -43,7 +43,7 @@ jobs:
           sleep 3  # Wait for the API server to start
 
       - name: Run tests
-        run: pytest --junit-xml=report.xml
+        run: pytest test --junit-xml=report.xml
 
       - name: Upload test report
         uses: mikepenz/action-junit-report@v3

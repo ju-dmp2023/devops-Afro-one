@@ -25,8 +25,7 @@ class TestCalculator(BaseTestCalculator):
 
 
     def test_add(self,a,b,expected):
-        calculator = CalculatorHelper()
-        value = calculator.add(a,b)
+        value = self.calculator.add(a,b)
         assert value  == expected 
         #assert_that(value).is_equal_to(3)
 
@@ -37,20 +36,17 @@ class TestCalculator(BaseTestCalculator):
     #    assert value  == 0   
 
     def test_subtract(self):
-        calculator = CalculatorHelper()
-        value = calculator.subtract(1,1)
+        value = self.calculator.subtract(1,1)
         assert value  == 0
 
     def test_multiply(self):
-        calculator = CalculatorHelper()
-        value = calculator.multiply(1,-1)
+        value = self.calculator.multiply(1,-1)
         assert value  == -1 
 
     def test_divide(self):
-        calculator = CalculatorHelper()
-        value = calculator.divide(1,-1)
+        value = self.calculator.divide(1,-1)
         assert value  == -1
         
     def test_zero_division(self):
         with pytest.raises(ZeroDivisionError):
-            1/0
+            self.calculator.divide(1,0)
